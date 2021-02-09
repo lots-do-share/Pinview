@@ -1,11 +1,7 @@
 # Pinview
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Pinview-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5394)
-[![Release](https://jitpack.io/v/GoodieBag/Pinview.svg)](https://jitpack.io/#GoodieBag/Pinview)
-[![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=15)
 
- Pinview library for android :pouting_cat:
- 
-![alt tag](https://media.giphy.com/media/U5BP5gk9zQaqs/giphy.gif)       ![alt_tag](https://media.giphy.com/media/CnCvLh9NT6Hio/giphy.gif)
+[![](https://jitpack.io/v/skree-tech/Pinview.svg)](https://jitpack.io/#skree-tech/Pinview)
+
 
 ## Gradle Dependency
 
@@ -21,7 +17,9 @@ allprojects {
 Add the dependency : 
 ```java
 dependencies {
-	   implementation 'com.github.GoodieBag:Pinview:v1.4'
+
+	        implementation 'com.github.skree-tech:Pinview:Tag'
+
 	}
 ```
 Sync the gradle and that's it! :+1:
@@ -30,7 +28,7 @@ Sync the gradle and that's it! :+1:
  * Flawless focus change to the consecutive pin box when the text is entered/deleted.
  * When the user taps on the Pinview, the first empty box available is focused automatically (when the cursor is hidden).
  * Listeners for onDataEntered ( To call an API when the pin is entered) and touch exists.
- * Customisations are available for pin box sizes, background(drawables, selectors), inputType etc.
+ * Customisations are available for pin box sizes, background(drawables, selectors), inputType , hintTextColors, etc.
  
 ## Usage
 
@@ -78,6 +76,10 @@ pin.setPinHeight(40);
 pin.setPinWidth(40);
 pin.setInputType(Pinview.InputType.NUMBER);
 pin.setValue("1234");
+pin.setTextColor(Color.WHITE);
+
+
+pin.setTextHintColor(Color.GRAY);
 myLayout.addView(pin);    
 ```
 ##### To get and set the pin values use the ```pin.getValue()``` and ```pin.setValue()``` methods respectively.
@@ -95,30 +97,5 @@ pinview.setPinViewEventListener(new Pinview.PinViewEventListener() {
 #### Note : 
 This library cannot be assured to work on 3rd party keyboards (especially when the cursor is off). It works as expected on google keyboards.
 We will be adding a work-around in the future releases.
-
-## LICENSE
-```
-MIT License
-
-Copyright (c) 2017 GoodieBag
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
 
 
